@@ -1,7 +1,7 @@
 .timeline-item {
   align-self: flex-start;
   justify-content: flex-end;
-  padding-left: 112px;
+  padding-left: 122px;
   padding-right: 16px;
   position: relative;
   margin: 10px 0;
@@ -49,13 +49,13 @@
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;
-  text-align: center;
+  text-align: right;
   white-space: pre-wrap;
   position: absolute;
   top: calc(50% - 16px);
   right: auto;
-  left: -108px;
-  width: 60px;
+  left: -120px;
+  width: 72px;
   height: 32px;
   display: flex;
   flex-direction: column;

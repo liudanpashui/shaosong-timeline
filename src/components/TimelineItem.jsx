@@ -1,18 +1,16 @@
 import "./TimelineItem.css";
-import { ReactComponent as BookIcon } from "../icons/book.svg";
+import { getIconSvg } from "../utils/iconUtils";
 
-const TimelineItem = ({ data }) => (
+const TimelineItem = ({ item, time }) => (
   <div className="timeline-item">
     <div className="timeline-item-content">
-      {/* <span className="tag" style={{ background: data.category.color }}>
-        {data.category.tag}
+      {/* <span className="tag" style={{ background: item.category.color }}>
+         item.category.tag}
       </span> */}
-      <time>{data.date}</time>
-      <p>{data.text}</p>
-      {data.link && <a href={data.link.url}>{data.link.text}</a>}
-      <span className="circle">
-        <BookIcon />
-      </span>
+      <time>{time}</time>
+      <p> {item.event}</p>
+      {/*  item.link && <a href= item.link.url}> item.link.text}</a>} */}
+      <span className="circle">{getIconSvg(item.category)}</span>
     </div>
   </div>
 );
