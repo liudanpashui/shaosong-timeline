@@ -49,13 +49,13 @@
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;
-  text-align: right;
+  text-align: center;
   white-space: pre-wrap;
   position: absolute;
   top: calc(50% - 16px);
   right: auto;
-  left: -120px;
-  width: 72px;
+  left: -96px;
+  width: 48px;
   height: 32px;
   display: flex;
   flex-direction: column;
@@ -65,14 +65,6 @@
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-}
-.timeline-item-content a {
-  font-size: 14px;
-  font-weight: bold;
-}
-.timeline-item-content a::after {
-  content: " ▼";
-  font-size: 12px;
 }
 .timeline-item-content .circle {
   background-color: #e17b77;

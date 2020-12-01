@@ -1,0 +1,17 @@
+.image-modal {
+  width: 90%;
+  margin: auto;
+  max-width: none !important;
+  font-size: 0.9rem;
+}
+.image-modal-header {
+  padding: 0.5rem 1rem;
+}
+.image-modal-footer {
+  padding: 0.5rem 1rem;
+  text-align: right;
+}
+
+.image-modal-body {
+  padding: 0 1rem;
+}

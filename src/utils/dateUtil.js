@@ -25,25 +25,39 @@ const months = [
 ];
 const digits = "一二三四五六七八九十";
 
-export function formatDate(year, month, date) {
-  let result = "";
-  year && (result += years[year][0] + "\n");
+function dateChars(year, month, date) {
+  let newYear = "";
+  let newMonth = "";
+  let newDate = "";
+  year && (newYear += years[year][0]);
   const monthInt = parseInt(month);
-  result += monthInt ? months[monthInt - 1] + "月" : month;
-  if (!date) return result;
+  newMonth = monthInt ? months[monthInt - 1] + "月" : month;
+  if (!date) return [newYear, newMonth, newDate];
   const dateInt = parseInt(date);
   if (dateInt) {
     if (dateInt <= 10) {
-      result += "初" + digits[dateInt - 1];
+      newDate += "初" + digits[dateInt - 1];
     } else {
       const tens = Math.floor(dateInt / 10);
       const ones = dateInt % 10;
-      tens > 1 && (result += digits[tens - 1]);
-      result += "十";
-      ones > 0 && (result += digits[ones - 1]);
+      tens > 1 && (newDate += digits[tens - 1]);
+      newDate += "十";
+      ones > 0 && (newDate += digits[ones - 1]);
     }
   } else {
-    result += date;
+    newDate = date;
   }
-  return result;
+  return [newYear, newMonth, newDate];
+}
+
+export function formattedDateMultipleLines(year, month, date) {
+  const [newYear, newMonth, newDate] = dateChars(year, month, date);
+  return `${newYear}\n${newMonth}${
+    (newMonth + newDate).length > 4 ? "\n" : ""
+  }${newDate}`;
+}
+
+export function formattedDateSingleLine(year, month, date) {
+  const [newYear, newMonth, newDate] = dateChars(year, month, date);
+  return `${newYear}(${year}) ${newMonth}${newDate}`;
 }

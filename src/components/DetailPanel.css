@@ -1,0 +1,9 @@
+.btn-link,
+.btn-link:hover,
+.btn-link:focus {
+  font-size: 12px;
+  padding: 0;
+  font-weight: none;
+  color: #007bff;
+  text-decoration: none;
+}

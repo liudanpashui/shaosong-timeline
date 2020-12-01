@@ -1,7 +1,7 @@
 import React from "react";
 import TimelineItem from "./TimelineItem";
 import "./Timeline.css";
-import { formatDate } from "../utils/dateUtil";
+import { formattedDateMultipleLines } from "../utils/dateUtil";
 
 const Timeline = ({ timelineData }) =>
   timelineData.length > 0 && (
@@ -26,7 +26,7 @@ function displayedDate(timelineData, item, idx) {
     previousDate.month === month && previousDate.date === date && (month = "");
     previousDate.date === date && (date = "");
   }
-  return formatDate(year, month, date);
+  return formattedDateMultipleLines(year, month, date);
 }
 
 export default Timeline;

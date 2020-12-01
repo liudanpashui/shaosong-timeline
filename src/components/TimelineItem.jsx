@@ -1,5 +1,6 @@
 import "./TimelineItem.css";
-import { getIconSvg } from "../utils/iconUtils";
+import { getIconSvg } from "../utils/iconUtil";
+import DetailPanel from "./DetailPanel";
 
 const TimelineItem = ({ item, time }) => (
   <div className="timeline-item">
@@ -9,7 +10,7 @@ const TimelineItem = ({ item, time }) => (
       </span> */}
       <time>{time}</time>
       <p> {item.event}</p>
-      {/*  item.link && <a href= item.link.url}> item.link.text}</a>} */}
+      {(item.detail || item.image) && <DetailPanel item={item}></DetailPanel>}
       <span className="circle">{getIconSvg(item.category)}</span>
     </div>
   </div>
