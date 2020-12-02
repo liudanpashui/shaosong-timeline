@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/shaosong-timeline/static/css/main.4e199ea6.chunk.css",
-    "main.js": "/shaosong-timeline/static/js/main.b5525e53.chunk.js",
-    "main.js.map": "/shaosong-timeline/static/js/main.b5525e53.chunk.js.map",
+    "main.js": "/shaosong-timeline/static/js/main.203053cc.chunk.js",
+    "main.js.map": "/shaosong-timeline/static/js/main.203053cc.chunk.js.map",
     "runtime-main.js": "/shaosong-timeline/static/js/runtime-main.8cf5db4c.js",
     "runtime-main.js.map": "/shaosong-timeline/static/js/runtime-main.8cf5db4c.js.map",
     "static/js/2.62cf9667.chunk.js": "/shaosong-timeline/static/js/2.62cf9667.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.8cf5db4c.js",
     "static/js/2.62cf9667.chunk.js",
     "static/css/main.4e199ea6.chunk.css",
-    "static/js/main.b5525e53.chunk.js"
+    "static/js/main.203053cc.chunk.js"
   ]
 }
