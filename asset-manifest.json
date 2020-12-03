@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/shaosong-timeline/static/css/main.4e199ea6.chunk.css",
-    "main.js": "/shaosong-timeline/static/js/main.203053cc.chunk.js",
-    "main.js.map": "/shaosong-timeline/static/js/main.203053cc.chunk.js.map",
-    "runtime-main.js": "/shaosong-timeline/static/js/runtime-main.8cf5db4c.js",
-    "runtime-main.js.map": "/shaosong-timeline/static/js/runtime-main.8cf5db4c.js.map",
-    "static/js/2.62cf9667.chunk.js": "/shaosong-timeline/static/js/2.62cf9667.chunk.js",
-    "static/js/2.62cf9667.chunk.js.map": "/shaosong-timeline/static/js/2.62cf9667.chunk.js.map",
-    "index.html": "/shaosong-timeline/index.html",
-    "static/css/main.4e199ea6.chunk.css.map": "/shaosong-timeline/static/css/main.4e199ea6.chunk.css.map",
-    "static/js/2.62cf9667.chunk.js.LICENSE.txt": "/shaosong-timeline/static/js/2.62cf9667.chunk.js.LICENSE.txt",
-    "static/media/TimelineData.8d2687fe.csv": "/shaosong-timeline/static/media/TimelineData.8d2687fe.csv",
-    "static/media/battle.943fc70e.svg": "/shaosong-timeline/static/media/battle.943fc70e.svg",
-    "static/media/book.a5012f01.svg": "/shaosong-timeline/static/media/book.a5012f01.svg",
-    "static/media/person.ae9778fc.svg": "/shaosong-timeline/static/media/person.ae9778fc.svg"
+    "main.css": "/static/css/main.4e199ea6.chunk.css",
+    "main.js": "/static/js/main.203053cc.chunk.js",
+    "main.js.map": "/static/js/main.203053cc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.db48dda1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.db48dda1.js.map",
+    "static/js/2.62cf9667.chunk.js": "/static/js/2.62cf9667.chunk.js",
+    "static/js/2.62cf9667.chunk.js.map": "/static/js/2.62cf9667.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4e199ea6.chunk.css.map": "/static/css/main.4e199ea6.chunk.css.map",
+    "static/js/2.62cf9667.chunk.js.LICENSE.txt": "/static/js/2.62cf9667.chunk.js.LICENSE.txt",
+    "static/media/TimelineData.8d2687fe.csv": "/static/media/TimelineData.8d2687fe.csv",
+    "static/media/battle.943fc70e.svg": "/static/media/battle.943fc70e.svg",
+    "static/media/book.a5012f01.svg": "/static/media/book.a5012f01.svg",
+    "static/media/person.ae9778fc.svg": "/static/media/person.ae9778fc.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8cf5db4c.js",
+    "static/js/runtime-main.db48dda1.js",
     "static/js/2.62cf9667.chunk.js",
     "static/css/main.4e199ea6.chunk.css",
     "static/js/main.203053cc.chunk.js"
