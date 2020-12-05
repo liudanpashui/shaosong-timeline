@@ -7,3 +7,8 @@
   color: #007bff;
   text-decoration: none;
 }
+
+#image-thumbnail {
+  max-width: 400px;
+  width: 100%;
+}

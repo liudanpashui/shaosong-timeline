@@ -1,8 +1,22 @@
-.image-modal {
+.image-modal-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1050;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.image-modal-container {
   width: 90%;
   margin: auto;
-  max-width: none !important;
-  font-size: 0.9rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
 }
 .image-modal-header {
   padding: 0.5rem 1rem;
@@ -11,7 +25,9 @@
   padding: 0.5rem 1rem;
   text-align: right;
 }
-
 .image-modal-body {
   padding: 0 1rem;
+}
+.react-transform-component {
+  height: 100% !important;
 }

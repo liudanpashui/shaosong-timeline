@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Collapse, Button } from "react-bootstrap";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DetailPanel.css";
 import ImageModal from "./ImageModal";
@@ -17,7 +18,7 @@ function DetailPanel({ item }) {
     };
   };
   return (
-    <div>
+    <>
       <Button
         variant="link"
         size="sm"
@@ -29,10 +30,25 @@ function DetailPanel({ item }) {
       </Button>
       <Collapse in={open}>
         <div id="collapse-content">
-          {item.image && <ImageModal image={getImageInfo(item)} />}
+          {item.image &&
+            (() => {
+              const image = getImageInfo(item);
+              return (
+                <Router>
+                  <Link to={`/${item.image}`}>
+                    <img id="image-thumbnail" src={image.path} />
+                  </Link>
+                  <Route
+                    exact
+                    path={`/${item.image}`}
+                    render={(props) => <ImageModal {...props} image={image} />}
+                  />
+                </Router>
+              );
+            })()}
         </div>
       </Collapse>
-    </div>
+    </>
   );
 }
 export default DetailPanel;

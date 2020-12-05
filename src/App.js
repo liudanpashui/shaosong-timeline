@@ -26,7 +26,11 @@ class App extends Component {
       <div className="App">
         <p>
           【年表文字作者：
-          <a href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=481512730717716480">
+          <a
+            href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=481512730717716480"
+            rel="noreferrer"
+            target="_blank"
+          >
             rottenweed
           </a>
           】
