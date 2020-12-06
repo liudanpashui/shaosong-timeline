@@ -1,9 +1,7 @@
 .btn-link,
 .btn-link:hover,
 .btn-link:focus {
-  font-size: 12px;
   padding: 0;
-  font-weight: none;
   color: #007bff;
   text-decoration: none;
 }
@@ -11,4 +9,10 @@
 #image-thumbnail {
   max-width: 400px;
   width: 100%;
+}
+
+div.detail-text {
+  white-space: pre-wrap;
+  font-size: 0.875rem;
+  color: #aaa;
 }

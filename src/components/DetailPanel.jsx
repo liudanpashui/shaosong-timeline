@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Collapse, Button } from "react-bootstrap";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,17 +26,26 @@ function DetailPanel({ item }) {
         aria-controls="collapse-content"
         aria-expanded={open}
       >
-        {open ? "更多 ▲" : "更多 ▼"}
+        {open ? "收起 ▲" : "展开 ▼"}
       </Button>
       <Collapse in={open}>
         <div id="collapse-content">
+          {item.detail && (
+            <div className="detail-text">
+              {item.detail.replace("\\n", "\n")}
+            </div>
+          )}
           {item.image &&
             (() => {
               const image = getImageInfo(item);
               return (
                 <Router>
                   <Link to={`/${item.image}`}>
-                    <img id="image-thumbnail" src={image.path} />
+                    <img
+                      id="image-thumbnail"
+                      src={image.path}
+                      alt={image.title}
+                    />
                   </Link>
                   <Route
                     exact
