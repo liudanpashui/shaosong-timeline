@@ -10,7 +10,9 @@ export function parseTimelineData(text) {
     let items = line.trim().split(delimiter);
     keys.forEach((key, index) => {
       if (items[index]) {
-        event[key] = items[index];
+        let value = items[index];
+        value.includes(",") && (value = value.replaceAll('"', "").split(","));
+        event[key] = value;
       }
     });
     events.push(event);
