@@ -36,7 +36,7 @@ const ImageModal = ({ image }) => {
             </Modal.Body>
             <Modal.Footer bsPrefix="image-modal-footer">
               <span>
-                <a href={image.path} download>
+                <a href={image.path} rel="noreferrer" target="_blank">
                   {"下载原图"}
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
