@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Collapse, Button } from "react-bootstrap";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DetailPanel.css";
 import ImageModal from "./ImageModal";
@@ -22,18 +23,27 @@ function DetailPanel({ item }) {
       return {
         name: imageNames[index],
         title: formattedDateSingleLine(item.year, item.month, item.date),
-        path: require(`../images/${imageNames[index]}`).default,
+        path: require(`../images/${imageNames[index]}.png`).default,
         author: imageAuthors[index],
         link: imageSources[index],
       };
     });
   };
+
+  const executeScroll = () => {
+    //Lazyload observe the scroll to load component
+    window.scrollBy(0, 1);
+  };
+
   return (
     <>
       <Button
         variant="link"
         size="sm"
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setOpen(!open);
+          !open && executeScroll();
+        }}
         aria-controls="collapse-content"
         aria-expanded={open}
       >
@@ -49,27 +59,31 @@ function DetailPanel({ item }) {
           {item.image &&
             (() => {
               const images = getImageInfo(item);
-              return images.map((image, _) => {
-                return (
-                  <Router>
-                    <Link to={`/${image.name}`}>
-                      <img
-                        id="image-thumbnail"
-                        src={image.path}
-                        alt={image.title}
-                      />
-                    </Link>
-                    <Route
-                      exact
-                      path={`/${image.name}`}
-                      render={(props) => (
-                        <ImageModal {...props} image={image} />
-                      )}
-                    />
-                    <br />
-                  </Router>
-                );
-              });
+              return (
+                <LazyLoad height={100} once>
+                  {images.map((image, idx) => {
+                    return (
+                      <Router key={idx}>
+                        <Link to={`/${image.name}`}>
+                          <img
+                            id="image-thumbnail"
+                            src={image.path}
+                            alt={image.title}
+                          />
+                        </Link>
+                        <Route
+                          exact
+                          path={`/${image.name}`}
+                          render={(props) => (
+                            <ImageModal {...props} image={image} />
+                          )}
+                        />
+                        <br />
+                      </Router>
+                    );
+                  })}
+                </LazyLoad>
+              );
             })()}
         </div>
       </Collapse>

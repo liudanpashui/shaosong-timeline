@@ -11,7 +11,7 @@ export function parseTimelineData(text) {
     keys.forEach((key, index) => {
       if (items[index]) {
         let value = items[index];
-        value.includes(",") && (value = value.replaceAll('"', "").split(","));
+        value.includes(",") && (value = value.replace(/["]/g, "").split(","));
         event[key] = value;
       }
     });
