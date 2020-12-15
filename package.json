@@ -1,6 +1,6 @@
 {
   "name": "shaosong-timeline",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
@@ -13,6 +13,7 @@
     "react-lazyload": "^3.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-string-replace": "^0.4.4",
     "react-zoom-pan-pinch": "^1.6.1",
     "web-vitals": "^0.2.4"
   },

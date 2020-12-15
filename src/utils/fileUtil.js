@@ -2,20 +2,20 @@ export function parseTimelineData(text) {
   const delimiter = "\t";
   const lines = text.split("\n");
   const keys = lines[0].trim().split(delimiter);
-  let events = [];
+  let items = [];
   lines.shift();
   for (const line of lines) {
     if (line.length === 0) continue;
-    let event = {};
-    let items = line.trim().split(delimiter);
+    let item = {};
+    let entries = line.trim().split(delimiter);
     keys.forEach((key, index) => {
-      if (items[index]) {
-        let value = items[index];
+      if (entries[index]) {
+        let value = entries[index];
         value.includes(",") && (value = value.replace(/["]/g, "").split(","));
-        event[key] = value;
+        item[key] = value;
       }
     });
-    events.push(event);
+    items.push(item);
   }
-  return events;
+  return items;
 }

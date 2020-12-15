@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Timeline from "./components/Timeline";
 import "./App.css";
-import { parseTimelineData } from "./utils/csvUtil";
-import timelineData from "./data/TimelineData.csv";
+import { parseTimelineData } from "./utils/fileUtil";
+import timelineData from "./data/TimelineData.txt";
 
 class App extends Component {
   constructor(props) {

@@ -1,12 +1,12 @@
 const years = {
-  1126: ["靖康元年", "天会四年"],
-  1127: ["建炎元年", "天会五年"],
-  1128: ["建炎二年"],
-  1129: ["建炎三年"],
-  1130: ["建炎四年"],
-  1131: ["建炎五年"],
-  1132: ["建炎六年"],
-  1133: ["建炎七年"],
+  1126: ["靖康元年", "金天会四年"],
+  1127: ["建炎元年", "靖康二年", "金天会五年"],
+  1128: ["建炎二年", "金天会六年"],
+  1129: ["建炎三年", "金天会七年"],
+  1130: ["建炎四年", "金天会八年"],
+  1131: ["建炎五年", "金天会九年", "金皇统元年"],
+  1132: ["建炎六年", "金皇统二年", "西夏正德六年"],
+  1133: ["建炎七年", "金皇统三年"],
 };
 
 const months = [
@@ -54,10 +54,35 @@ export function formattedDateMultipleLines(year, month, date) {
   const [newYear, newMonth, newDate] = dateChars(year, month, date);
   return `${newYear}\n${newMonth}${
     (newMonth + newDate).length > 4 ? "\n" : ""
-  }${newDate}`;
+  }${newDate}`.replace(/^\s+|\s+$/g, "");
 }
 
 export function formattedDateSingleLine(year, month, date) {
   const [newYear, newMonth, newDate] = dateChars(year, month, date);
   return `${newYear}(${year}) ${newMonth}${newDate}`;
+}
+
+export function formattedYearDetails(year) {
+  const yearVariants = years[year];
+  let line1 = "" + yearVariants[0];
+  yearVariants.forEach((yearName, index) => {
+    if (index === 0) {
+      line1 += `(${year})`;
+    } else {
+      line1 += `/${yearName}`;
+    }
+  });
+  const line2 = `赵玖${age(1107, year)}岁`;
+  return `${line1}\n${line2}`;
+}
+
+export function age(yearOfBirth, currentYear) {
+  const age = currentYear - yearOfBirth + 1;
+  let ageText = "";
+  const tens = Math.floor(age / 10);
+  const ones = age % 10;
+  tens > 1 && (ageText += digits[tens - 1]);
+  ageText += "十";
+  ones > 0 && (ageText += digits[ones - 1]);
+  return ageText;
 }

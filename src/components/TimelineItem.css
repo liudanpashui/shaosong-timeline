@@ -84,3 +84,14 @@
   height: 16px;
   margin: 6px;
 }
+
+#year-popover {
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+
+.popover-link {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: rgba(0, 0, 0, 0.2);
+}
