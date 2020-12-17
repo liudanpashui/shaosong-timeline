@@ -88,10 +88,28 @@
 #year-popover {
   max-width: 100%;
   white-space: pre-wrap;
+  font-size: 0.8rem;
 }
 
 .popover-link {
   text-decoration-line: underline;
   text-decoration-style: dashed;
-  text-decoration-color: rgba(0, 0, 0, 0.2);
+  text-decoration-color: rgba(114, 93, 93, 0.5);
+}
+
+.character-detail {
+  font-size: 0.9rem;
+}
+
+.character-detail.name {
+  font-weight: bold;
+}
+
+.character-detail.previous {
+  color: #ccc;
+  text-decoration-line: line-through;
+}
+
+.character-detail.new {
+  color: #e17b77;
 }
