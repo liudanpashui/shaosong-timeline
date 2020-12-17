@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Timeline from "./components/Timeline";
 import "./App.css";
 import { parseTimelineData } from "./utils/fileUtil";
-import timelineData from "./data/TimelineData.txt";
+import timelineData from "./data/TimelineData.csv";
 
 class App extends Component {
   constructor(props) {
