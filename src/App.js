@@ -24,18 +24,96 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>
-          【年表文字作者：
-          <a
-            href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=481512730717716480"
-            rel="noreferrer"
-            target="_blank"
-          >
-            rottenweed
-          </a>
-          】
-        </p>
-        <p>这只是个草稿，被蛋灵帝泄密了，地图大佬还在画，更多内容敬请期待</p>
+        <table className="about">
+          <tr>
+            <td colspan="2">
+              《绍宋》榴弹怕水 著（
+              <a
+                href="https://book.qidian.com/info/1017281778"
+                rel="noreferrer"
+                target="_blank"
+              >
+                起点正版阅读
+              </a>
+              ）
+            </td>
+          </tr>
+          <tr>
+            <td>年表整理：</td>
+            <td>
+              <a
+                href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=481512730717716480"
+                rel="noreferrer"
+                target="_blank"
+              >
+                rottenweed
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>地图绘制：</td>
+            <td>
+              <a
+                href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=545540574627889152"
+                rel="noreferrer"
+                target="_blank"
+              >
+                悦冻窝心
+              </a>
+              ，
+              <a
+                href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=545773599232032768"
+                rel="noreferrer"
+                target="_blank"
+              >
+                书友20200423183236848
+              </a>
+              ，
+              <a
+                href="https://bbs.nga.cn/read.php?tid=24008898"
+                rel="noreferrer"
+                target="_blank"
+              >
+                逐日金痕
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>年龄考据：</td>
+            <td>
+              <a
+                href="https://bbs.nga.cn/read.php?tid=24298333"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Melissa兰
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>网页制作：</td>
+            <td>
+              夏侯宁远 （
+              <a
+                href="https://github.com/liudanpashui/shaosong-timeline"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Github源码
+              </a>
+              ）
+            </td>
+          </tr>
+          <tr>
+            <td>更新日志：</td>
+            <td>2020.12.23 人事调动整理至第一卷末</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>P.S. 半成品制作中，更多功能敬请期待……蛋灵帝轻佻，提前泄密😂</td>
+          </tr>
+        </table>
+
         <Timeline timelineData={this.state.timelineData} />
       </div>
     );

@@ -25,3 +25,23 @@ a:active {
   color: #fff;
   background-color: #007bff;
 }
+
+.about {
+  display: block;
+  font-size: 0.8rem;
+  background-color: rgba(217, 255, 244, 0.3);
+  color: #666;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+}
+
+td:first-child {
+  min-width: 3.8rem;
+  max-width: 4rem;
+}
+
+td {
+  vertical-align: top;
+}
