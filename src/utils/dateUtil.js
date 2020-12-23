@@ -77,8 +77,14 @@ export function formattedYearDetails(year) {
 }
 
 export function age(yearOfBirth, currentYear) {
-  const age = currentYear - yearOfBirth + 1;
+  yearOfBirth += "";
   let ageText = "";
+  if (yearOfBirth.includes("+")) {
+    ageText += "约";
+    yearOfBirth = yearOfBirth.replace("+", "");
+  }
+
+  const age = currentYear - yearOfBirth + 1;
   const tens = Math.floor(age / 10);
   const ones = age % 10;
   tens > 1 && (ageText += digits[tens - 1]);

@@ -2,10 +2,9 @@ import { Popover, OverlayTrigger } from "react-bootstrap";
 import { age } from "../utils/dateUtil";
 
 const CharacterPopover = ({ character, year, id }) => {
-  const ageText =
-    character.yearOfBirth > 0
-      ? `（${age(character.yearOfBirth, year)}岁）`
-      : "";
+  const ageText = character.yearOfBirth
+    ? `（${age(character.yearOfBirth, year)}岁）`
+    : "";
 
   let previousPosition;
   let newPosition;
