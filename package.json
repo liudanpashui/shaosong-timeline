@@ -1,6 +1,6 @@
 {
   "name": "shaosong-timeline",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
