@@ -39,7 +39,7 @@ class App extends Component {
             </td>
           </tr>
           <tr>
-            <td>年表整理：</td>
+            <td>年表作者：</td>
             <td>
               <a
                 href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=481512730717716480"
@@ -107,7 +107,7 @@ class App extends Component {
           <tr>
             <td>更新日志：</td>
             <td>
-              2021.1.4 年表同步更新至建炎八年一月。人事调动整理至第二卷末。
+              2021.2.12 年表同步更新至建炎九年九月。人事调动整理至第二卷末。
             </td>
           </tr>
           <tr>
