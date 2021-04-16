@@ -46,7 +46,15 @@ class App extends Component {
                 rel="noreferrer"
                 target="_blank"
               >
-                rottenweed
+                rottenweed（至建炎九年十月)
+              </a>
+
+              <a
+                href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=598539036679798784"
+                rel="noreferrer"
+                target="_blank"
+              >
+                （建炎九年十一月起）
               </a>
             </td>
           </tr>
@@ -75,6 +83,30 @@ class App extends Component {
                 target="_blank"
               >
                 逐日金痕
+              </a>
+              ，
+              <a
+                href="https://h5.if.qidian.com/h5/share/post/base?circleId=15610037104915904&postId=578188066485960704"
+                rel="noreferrer"
+                target="_blank"
+              >
+                floydluo
+              </a>
+              ，
+              <a
+                href="http://bbs.nga.cn/read.php?tid=25621895"
+                rel="noreferrer"
+                target="_blank"
+              >
+                wangxiaochaun
+              </a>
+              ，
+              <a
+                href="http://bbs.nga.cn/read.php?tid=26081223"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Nsity
               </a>
             </td>
           </tr>
@@ -107,12 +139,15 @@ class App extends Component {
           <tr>
             <td>更新日志：</td>
             <td>
-              2021.3.1 年表同步更新至建炎九年十月。人事调动整理至第二卷末。
+              2021.4.16 时间线更新至建炎九年十二月，增加了河东、大名府战役地图。
             </td>
           </tr>
           <tr>
             <td></td>
-            <td>P.S. 这是一个被蛋灵帝提前泄密的半成品，更多功能敬请期待……</td>
+            <td>
+              P.S.
+              半成品施工中……如果页面出现错误请多刷新几次或者清理浏览器缓存。
+            </td>
           </tr>
         </table>
 

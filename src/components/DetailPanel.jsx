@@ -36,6 +36,7 @@ function DetailPanel({ detail, imageInfos }) {
               {imageInfos.map((image, idx) => {
                 return (
                   <Router key={idx}>
+                    <br />
                     <Link to={`/${image.name}`}>
                       <img
                         id="image-thumbnail"

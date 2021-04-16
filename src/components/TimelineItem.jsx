@@ -58,7 +58,7 @@ const TimelineItem = ({ item, time }) => {
       return {
         name: imageNames[index],
         title: formattedDateSingleLine(item.year, item.month, item.date),
-        path: require(`../images/${imageNames[index]}.png`).default,
+        path: require(`../images/${imageNames[index]}`).default,
         author: imageAuthors[index],
         link: imageSources[index],
       };
