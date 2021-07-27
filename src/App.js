@@ -94,7 +94,7 @@ class App extends Component {
               </a>
               ，
               <a
-                href="http://bbs.nga.cn/read.php?tid=25621895"
+                href="https://bbs.nga.cn/read.php?tid=25621895"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -102,11 +102,19 @@ class App extends Component {
               </a>
               ，
               <a
-                href="http://bbs.nga.cn/read.php?tid=26081223"
+                href="https://bbs.nga.cn/read.php?tid=26081223"
                 rel="noreferrer"
                 target="_blank"
               >
                 Nsity
+              </a>
+              ，
+              <a
+                href="https://bbs.nga.cn/read.php?tid=27129490"
+                rel="noreferrer"
+                target="_blank"
+              >
+                焉支山_M
               </a>
             </td>
           </tr>
