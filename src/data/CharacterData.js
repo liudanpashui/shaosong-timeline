@@ -409,6 +409,34 @@ const characterData = [
     },
   },
   {
+    name: "斡本",
+    position: {
+      0: ["忽鲁勃极烈"],
+      1131030000: ["辽王", "太师", "平章军国重事"],
+    },
+  },
+  {
+    name: "希尹",
+    position: {
+      0: ["阿买勃极烈"],
+      1131030000: ["都省副相"],
+    },
+  },
+  {
+    name: "合剌",
+    yearOfBirth: "1119",
+    position: {
+      0: ["金国国主"],
+    },
+  },
+  {
+    name: "秦桧",
+    yearOfBirth: "1091",
+    position: {
+      0: ["金国枢密副使"],
+    },
+  },
+  {
     name: "赵佶",
     yearOfBirth: "1082",
     position: {
