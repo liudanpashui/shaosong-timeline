@@ -3,6 +3,7 @@ import Timeline from "./components/Timeline";
 import "./App.css";
 import { parseTimelineData } from "./utils/fileUtil";
 import timelineData from "./data/TimelineData.csv";
+import { Popover, OverlayTrigger } from "react-bootstrap";
 
 class App extends Component {
   constructor(props) {
@@ -147,6 +148,54 @@ class App extends Component {
           <tr>
             <td>更新日志：</td>
             <td>2021.8.2 更新至建炎十年八月，可达鸭祭于明道宫，正文完。</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              2024.3.21 更新番外时间线：建炎十八年（
+              <a
+                href="https://www.qidian.com/chapter/1017281778/665198046/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                番外1
+              </a>
+              ，
+              <a
+                href="https://www.qidian.com/chapter/1017281778/666939303/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                番外2
+              </a>
+              ，
+              <OverlayTrigger
+                placement="auto"
+                overlay={
+                  <Popover>
+                    <Popover.Content>
+                      不在正文内，手机app搜索单独书名《绍宋：番外》，作者：榴弹怕水，网页版看不到
+                    </Popover.Content>
+                  </Popover>
+                }
+              >
+                <span className="popover-link">《绍宋：番外》</span>
+              </OverlayTrigger>
+              ），
+              <OverlayTrigger
+                placement="auto"
+                overlay={
+                  <Popover>
+                    <Popover.Content>
+                      手机app《绍宋》最新章，网页版看不到
+                    </Popover.Content>
+                  </Popover>
+                }
+              >
+                <span className="popover-link">建炎三十六年</span>
+              </OverlayTrigger>
+              。
+            </td>
           </tr>
         </table>
 
