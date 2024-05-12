@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2",
-    "bootstrap": "^4.5.3",
-    "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^17.0.1",
-    "react-lazyload": "^3.1.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "react-string-replace": "^0.4.4",
-    "react-zoom-pan-pinch": "^1.6.1",
-    "web-vitals": "^0.2.4"
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
+    "@testing-library/user-event": "^14.5.2",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18.3.1",
+    "react-lazyload": "^3.2.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "react-string-replace": "^1.1.1",
+    "react-zoom-pan-pinch": "^3.4.4",
+    "web-vitals": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
-  },
-  "homepage": "https://liudanpashui.github.io/shaosong-timeline/"
+    "gh-pages": "^6.1.1"
+  }
 }

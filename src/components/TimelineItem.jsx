@@ -15,7 +15,7 @@ const TimelineItem = ({ item, time }) => {
   const yearDetail = formattedYearDetails(item.year);
   const yearPopover = (
     <Popover id="year-popover">
-      <Popover.Content>{yearDetail}</Popover.Content>
+      <Popover.Body>{yearDetail}</Popover.Body>
     </Popover>
   );
 
@@ -53,12 +53,11 @@ const TimelineItem = ({ item, time }) => {
     const imageSources = Array.isArray(item.imageSource)
       ? item.imageSource
       : [item.imageSource];
-
     return imageNames.map((_, index) => {
       return {
         name: imageNames[index],
         title: formattedDateSingleLine(item.year, item.month, item.date),
-        path: require(`../images/${imageNames[index]}`).default,
+        path: require(`../images/${imageNames[index]}`),
         author: imageAuthors[index],
         link: imageSources[index],
       };

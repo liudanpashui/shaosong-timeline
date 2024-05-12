@@ -23,7 +23,7 @@ const CharacterPopover = ({ character, year, id }) => {
   }
   const popover = (
     <Popover>
-      <Popover.Content>
+      <Popover.Body>
         <span className="character-detail name">{`${character.name}${ageText}`}</span>
         {character.position &&
           (newPosition ? (
@@ -41,7 +41,7 @@ const CharacterPopover = ({ character, year, id }) => {
               <span className="character-detail now">{previousPosition}</span>
             </>
           ))}
-      </Popover.Content>
+      </Popover.Body>
     </Popover>
   );
 

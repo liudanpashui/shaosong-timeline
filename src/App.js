@@ -4,6 +4,7 @@ import "./App.css";
 import { parseTimelineData } from "./utils/fileUtil";
 import timelineData from "./data/TimelineData.csv";
 import { Popover, OverlayTrigger } from "react-bootstrap";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -23,11 +24,11 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <table className="about">
+    const header = (
+      <table className="about">
+        <tbody>
           <tr>
-            <td colspan="2">
+            <td colSpan="2">
               《绍宋》榴弹怕水 著（
               <a
                 href="https://book.qidian.com/info/1017281778"
@@ -173,9 +174,9 @@ class App extends Component {
                 placement="auto"
                 overlay={
                   <Popover>
-                    <Popover.Content>
+                    <Popover.Body>
                       不在正文内，手机app搜索单独书名《绍宋：番外》，作者：榴弹怕水，网页版看不到
-                    </Popover.Content>
+                    </Popover.Body>
                   </Popover>
                 }
               >
@@ -186,9 +187,9 @@ class App extends Component {
                 placement="auto"
                 overlay={
                   <Popover>
-                    <Popover.Content>
+                    <Popover.Body>
                       手机app《绍宋》最新章，网页版看不到
-                    </Popover.Content>
+                    </Popover.Body>
                   </Popover>
                 }
               >
@@ -197,10 +198,24 @@ class App extends Component {
               。
             </td>
           </tr>
-        </table>
+        </tbody>
+      </table>
+    );
 
-        <Timeline timelineData={this.state.timelineData} />
-      </div>
+    const { timelineData } = this.state;
+
+    return (
+      <Router>
+        <div className="App">
+          {header}
+          <Routes>
+            <Route
+              path="*"
+              element={<Timeline timelineData={timelineData} />}
+            />
+          </Routes>
+        </div>
+      </Router>
     );
   }
 }

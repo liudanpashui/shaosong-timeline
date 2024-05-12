@@ -1,14 +1,14 @@
 import React from "react";
 import { Modal, Image } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import "./ImageModal.css";
 
 const ImageModal = ({ image }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClose = () => {
-    history.goBack();
+    navigate(-1);
   };
   const handleContainerClick = (e) => {
     e.stopPropagation();
@@ -18,38 +18,43 @@ const ImageModal = ({ image }) => {
       <TransformWrapper
         wheel={{ step: 100 }}
         doubleClick={{ mode: "reset" }}
-        options={{ centerContent: false }}
+        centerOnInit
       >
         <TransformComponent>
-          <div className="image-modal-container" onClick={handleContainerClick}>
-            <Modal.Header
-              closeButton
-              bsPrefix="image-modal-header"
-              onHide={handleClose}
+          <div className="image-modal-view">
+            <div
+              className="image-modal-container"
+              onClick={handleContainerClick}
             >
-              <Modal.Title id="image-modal-title" as="span">
-                {image.title}
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body bsPrefix="image-modal-body">
-              <Image src={image.path} fluid />
-            </Modal.Body>
-            <Modal.Footer bsPrefix="image-modal-footer">
-              <span>
-                <a href={image.path} rel="noreferrer" target="_blank">
-                  {"下载原图"}
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                {"作者："}
-                {image.link ? (
-                  <a href={image.link} rel="noreferrer" target="_blank">
-                    {image.author}
+              <Modal.Header
+                closeButton
+                bsPrefix="image-modal-header"
+                onHide={handleClose}
+              >
+                <Modal.Title id="image-modal-title" as="span">
+                  {image.title}
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body bsPrefix="image-modal-body">
+                <Image src={image.path} fluid />
+              </Modal.Body>
+              <Modal.Footer bsPrefix="image-modal-footer">
+                <span>
+                  <a href={image.path} rel="noreferrer" target="_blank">
+                    {"下载原图"}
                   </a>
-                ) : (
-                  <span>{image.author}</span>
-                )}
-              </span>
-            </Modal.Footer>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  {"作者："}
+                  {image.link ? (
+                    <a href={image.link} rel="noreferrer" target="_blank">
+                      {image.author}
+                    </a>
+                  ) : (
+                    <span>{image.author}</span>
+                  )}
+                </span>
+              </Modal.Footer>
+            </div>
           </div>
         </TransformComponent>
       </TransformWrapper>
