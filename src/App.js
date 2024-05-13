@@ -203,9 +203,10 @@ class App extends Component {
     );
 
     const { timelineData } = this.state;
+    const basename = process.env.REACT_APP_HOMEPAGE || "/";
 
     return (
-      <Router>
+      <Router basename={basename}>
         <div className="App">
           {header}
           <Routes>
