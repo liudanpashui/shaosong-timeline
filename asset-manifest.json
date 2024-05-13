@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shaosong-timeline/static/css/main.ab8d0c2a.css",
+    "main.css": "/shaosong-timeline/static/css/main.44edaeb0.css",
     "main.js": "/shaosong-timeline/static/js/main.9ec6e318.js",
     "static/media/11351013-03.png": "/shaosong-timeline/static/media/11351013-03.0de379fd7b5237a7ef18.png",
     "static/media/11351023-01.png": "/shaosong-timeline/static/media/11351023-01.1d2f37b228350817f15a.png",
@@ -41,11 +41,11 @@
     "index.html": "/shaosong-timeline/index.html",
     "static/media/book.svg": "/shaosong-timeline/static/media/book.a5012f01b352714767a27c35c4a399d3.svg",
     "static/media/person.svg": "/shaosong-timeline/static/media/person.ae9778fcfa32ef18684d923989b94410.svg",
-    "main.ab8d0c2a.css.map": "/shaosong-timeline/static/css/main.ab8d0c2a.css.map",
+    "main.44edaeb0.css.map": "/shaosong-timeline/static/css/main.44edaeb0.css.map",
     "main.9ec6e318.js.map": "/shaosong-timeline/static/js/main.9ec6e318.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab8d0c2a.css",
+    "static/css/main.44edaeb0.css",
     "static/js/main.9ec6e318.js"
   ]
 }
