@@ -17,7 +17,7 @@
   height: 100vh;
 }
 .image-modal-container {
-  width: 90%;
+  max-width: min(800px, 90%);
   margin: 48px auto;
   background-color: #fff;
   background-clip: padding-box;
