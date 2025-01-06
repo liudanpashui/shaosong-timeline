@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^6.4.5",
-    "@testing-library/react": "^15.0.7",
-    "@testing-library/user-event": "^14.5.2",
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
@@ -14,23 +11,14 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-string-replace": "^1.1.1",
-    "react-zoom-pan-pinch": "^3.4.4",
-    "web-vitals": "^3.5.2"
+    "react-zoom-pan-pinch": "^3.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build:github",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
-    "build:github": "REACT_APP_HOMEPAGE=https://liudanpashui.github.io/shaosong-timeline/ react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "build:github": "REACT_APP_HOMEPAGE=https://liudanpashui.github.io/shaosong-timeline/ react-scripts build"
   },
   "browserslist": {
     "production": [

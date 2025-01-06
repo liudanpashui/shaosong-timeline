@@ -41,7 +41,7 @@ const ImageModal = ({ image }) => {
               <Modal.Footer bsPrefix="image-modal-footer">
                 <span>
                   <a href={image.path} rel="noreferrer" target="_blank">
-                    {"下载原图"}
+                    {"打开原图"}
                   </a>
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   {"作者："}

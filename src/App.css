@@ -45,3 +45,25 @@ td:first-child {
 td {
   vertical-align: top;
 }
+
+.url-panel {
+  display: block;
+  font-size: 0.8rem;
+  background-color: #eee;
+  padding: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.url-item a {
+  text-decoration: underline;
+  color: #007bff; /* Link color */
+}
+
+.url-item a:hover,
+.url-item a:active {
+  color: #fff;
+  background-color: #007bff;
+}
