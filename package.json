@@ -19,13 +19,14 @@
     "@types/react-dom": "^18.2.19",
     "@types/react-lazyload": "^3.2.3",
     "@vitejs/plugin-react": "^4.2.1",
+    "cross-env": "^7.0.3",
     "gh-pages": "^6.1.1",
     "vite": "^5.1.3"
   },
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "build:gh-pages": "vite build --mode production",
+    "build:gh-pages": "cross-env GITHUB_PAGES=true vite build",
     "predeploy": "npm run build:gh-pages",
     "deploy": "gh-pages -d dist",
     "serve": "vite preview"
