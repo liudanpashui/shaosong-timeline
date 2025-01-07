@@ -1,16 +1,21 @@
 import React from "react";
-import { Modal, Image } from "react-bootstrap";
+import { Image, Modal } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
+import { ImageInfo } from "../../data/ImageData";
 import "./ImageModal.css";
 
-const ImageModal = ({ image }) => {
+type ImageModalProps = {
+  image: ImageInfo;
+};
+
+export const ImageModal: React.FC<ImageModalProps> = ({ image }) => {
   const navigate = useNavigate();
 
   const handleClose = () => {
     navigate(-1);
   };
-  const handleContainerClick = (e) => {
+  const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
   };
   return (
@@ -36,11 +41,11 @@ const ImageModal = ({ image }) => {
                 </Modal.Title>
               </Modal.Header>
               <Modal.Body bsPrefix="image-modal-body">
-                <Image src={image.path} fluid />
+                <Image src={image.src} fluid />
               </Modal.Body>
               <Modal.Footer bsPrefix="image-modal-footer">
                 <span>
-                  <a href={image.path} rel="noreferrer" target="_blank">
+                  <a href={image.src} rel="noreferrer" target="_blank">
                     {"打开原图"}
                   </a>
                   &nbsp;&nbsp;&nbsp;&nbsp;

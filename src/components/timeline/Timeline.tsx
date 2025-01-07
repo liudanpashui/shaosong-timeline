@@ -1,9 +1,14 @@
 import React from "react";
-import TimelineItem from "./TimelineItem";
+import { formattedDateMultipleLines } from "../../utils/dateUtil";
+import { TimelineDataItem } from "../../utils/fileUtil";
 import "./Timeline.css";
-import { formattedDateMultipleLines } from "../utils/dateUtil";
+import TimelineItem from "./TimelineItem";
 
-const Timeline = ({ timelineData }) =>
+type TimelineProps = {
+  timelineData: TimelineDataItem[];
+};
+
+export const Timeline: React.FC<TimelineProps> = ({ timelineData }) =>
   timelineData.length > 0 && (
     <div className="timeline-container">
       {timelineData.map((item, idx) => (
@@ -16,7 +21,11 @@ const Timeline = ({ timelineData }) =>
     </div>
   );
 
-function displayedDate(timelineData, item, idx) {
+function displayedDate(
+  timelineData: TimelineDataItem[],
+  item: TimelineDataItem,
+  idx: number
+): string {
   let year = item.year;
   let month = item.month;
   let date = item.date;
@@ -26,7 +35,7 @@ function displayedDate(timelineData, item, idx) {
     previousDate.month === month && previousDate.date === date && (month = "");
     previousDate.date === date && (date = "");
   }
-  return formattedDateMultipleLines(year, month, date);
+  return formattedDateMultipleLines(year, month || "", date || "");
 }
 
 export default Timeline;

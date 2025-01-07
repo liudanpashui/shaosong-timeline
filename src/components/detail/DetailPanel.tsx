@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import { Collapse, Button } from "react-bootstrap";
-import { Routes, Route, Link } from "react-router-dom";
-import LazyLoad from "react-lazyload";
 import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
+import { Button, Collapse } from "react-bootstrap";
+import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
+import { ImageInfo } from "../../data/ImageData";
 import "./DetailPanel.css";
-import ImageModal from "./ImageModal";
 
-function DetailPanel({ detail, imageInfos }) {
+type DetailPanelProps = {
+  detail?: string;
+  imageInfos?: ImageInfo[];
+};
+
+const DetailPanel: React.FC<DetailPanelProps> = ({ detail, imageInfos }) => {
   const [open, setOpen] = useState(false);
 
   const executeScroll = () => {
@@ -14,15 +19,19 @@ function DetailPanel({ detail, imageInfos }) {
     window.scrollBy(0, 1);
   };
 
+  const handleButtonClick = () => {
+    setOpen(!open);
+    if (!open) {
+      executeScroll();
+    }
+  };
+
   return (
     <>
       <Button
         variant="link"
         size="sm"
-        onClick={() => {
-          setOpen(!open);
-          !open && executeScroll();
-        }}
+        onClick={handleButtonClick}
         aria-controls="collapse-content"
         aria-expanded={open}
       >
@@ -39,27 +48,18 @@ function DetailPanel({ detail, imageInfos }) {
                   <Link to={`/${image.name}`}>
                     <img
                       id="image-thumbnail"
-                      src={image.path}
+                      src={image.src}
                       alt={image.title}
                     />
                   </Link>
                   <br />
                 </React.Fragment>
               ))}
-              <Routes>
-                {imageInfos.map((image) => (
-                  <Route
-                    key={image.name}
-                    path={`/${image.name}`}
-                    element={<ImageModal image={image} />}
-                  />
-                ))}
-              </Routes>
             </LazyLoad>
           )}
         </div>
       </Collapse>
     </>
   );
-}
+};
 export default DetailPanel;

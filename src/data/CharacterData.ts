@@ -1,4 +1,14 @@
-const characterData = [
+export type PositionHistory = {
+  [key: string]: string[];
+};
+
+export type Character = {
+  name: string;
+  yearOfBirth?: string;
+  position?: PositionHistory;
+};
+
+export const characterData: Character[] = [
   {
     name: "赵玖",
     yearOfBirth: "1107",

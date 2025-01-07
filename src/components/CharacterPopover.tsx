@@ -1,7 +1,18 @@
-import { Popover, OverlayTrigger } from "react-bootstrap";
+import { OverlayTrigger, Popover } from "react-bootstrap";
+import { Character } from "../data/CharacterData";
 import { age } from "../utils/dateUtil";
 
-const CharacterPopover = ({ character, year, id }) => {
+type CharacterPopoverProps = {
+  character: Character;
+  year: string;
+  id: number;
+};
+
+const CharacterPopover: React.FC<CharacterPopoverProps> = ({
+  character,
+  year,
+  id,
+}) => {
   const ageText = character.yearOfBirth
     ? `（${age(character.yearOfBirth, year)}岁）`
     : "";
@@ -11,9 +22,10 @@ const CharacterPopover = ({ character, year, id }) => {
   const positionDict = character.position;
   if (positionDict) {
     for (let key in positionDict) {
-      if (id < key) {
+      const keyAsNumber = Number(key);
+      if (id < keyAsNumber) {
         break;
-      } else if (id === key) {
+      } else if (id === keyAsNumber) {
         newPosition = positionDict[key].join("，");
         break;
       } else {

@@ -1,4 +1,4 @@
-const years = {
+const years: { [key: string]: string[] } = {
   1126: ["靖康元年", "金天会四年"],
   1127: ["建炎元年", "靖康二年", "金天会五年"],
   1128: ["建炎二年", "金天会六年"],
@@ -32,7 +32,7 @@ const months = [
 ];
 const digits = "一二三四五六七八九十";
 
-function dateChars(year, month, date) {
+function dateChars(year: string, month: string, date: string) {
   let newYear = "";
   let newMonth = "";
   let newDate = "";
@@ -57,19 +57,27 @@ function dateChars(year, month, date) {
   return [newYear, newMonth, newDate];
 }
 
-export function formattedDateMultipleLines(year, month, date) {
+export function formattedDateMultipleLines(
+  year: string,
+  month: string,
+  date: string
+) {
   const [newYear, newMonth, newDate] = dateChars(year, month, date);
   return `${newYear}\n${newMonth}${
     (newMonth + newDate).length > 4 ? "\n" : ""
   }${newDate}`.replace(/^\s+|\s+$/g, "");
 }
 
-export function formattedDateSingleLine(year, month, date) {
+export function formattedDateSingleLine(
+  year: string,
+  month: string,
+  date: string
+) {
   const [newYear, newMonth, newDate] = dateChars(year, month, date);
   return `${newYear}(${year}) ${newMonth}${newDate}`;
 }
 
-export function formattedYearDetails(year) {
+export function formattedYearDetails(year: string) {
   const yearVariants = years[year];
   let line1 = "" + yearVariants[0];
   yearVariants.forEach((yearName, index) => {
@@ -79,11 +87,11 @@ export function formattedYearDetails(year) {
       line1 += `/${yearName}`;
     }
   });
-  const line2 = `赵玖${age(1107, year)}岁`;
+  const line2 = `赵玖${age("1107", year)}岁`;
   return `${line1}\n${line2}`;
 }
 
-export function age(yearOfBirth, currentYear) {
+export function age(yearOfBirth: string, currentYear: string): string {
   yearOfBirth += "";
   let ageText = "";
   if (yearOfBirth.includes("+")) {
@@ -91,7 +99,7 @@ export function age(yearOfBirth, currentYear) {
     yearOfBirth = yearOfBirth.replace("+", "");
   }
 
-  const age = currentYear - yearOfBirth + 1;
+  const age = Number(currentYear) - Number(yearOfBirth) + 1;
   const tens = Math.floor(age / 10);
   const ones = age % 10;
   tens > 1 && (ageText += digits[tens - 1]);
