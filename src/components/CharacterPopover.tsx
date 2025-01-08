@@ -25,7 +25,7 @@ const CharacterPopover: React.FC<CharacterPopoverProps> = ({
       const keyAsNumber = Number(key);
       if (id < keyAsNumber) {
         break;
-      } else if (id === keyAsNumber) {
+      } else if (String(id) === key) {
         newPosition = positionDict[key].join("，");
         break;
       } else {
